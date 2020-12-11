@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Real Time Chat com Socket.IO</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 16px Helvetica, Arial; }
+      form { background: rgba(46, 50, 53, 0.2); border: 1px solid rgba(46, 50, 53, 0.1); display: flex; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; flex: 1; margin-right: 1px; font-size: 16px; }
+      form button { width: 9%; background: #eb524c; border: none; padding: 10px; color: #fff; font-size: 16px; }
+      #messages { list-style-type: none; margin: 50px 0 0; padding: 0; }
+      #messages li { padding: 20px; margin: 5px 10%; border-radius: 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+      #title { margin-top: 20px; text-align: center; }
+      #title strong { color: #eb524c; }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Real time chat com <br><strong>Yara Polana</strong></h1>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" />
+      <button>Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function () {
+        var socket = io();
+        $('form').submit(function(e) {
+          e.preventDefault();
+          socket.emit('chatar', $('#m').val());
+          $('#m').val('');
+          return false;
+        });
+        socket.on('chatar', function(msg) {
+          $('#messages').append($('<li>').text(msg));
+        });
+      });
+    </script>
+  </body>
+</html>

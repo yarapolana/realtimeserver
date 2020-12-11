@@ -1,0 +1,24 @@
+{
+  "name": "realtimetest",
+  "author": "Yara Polana",
+  "version": "1.0.0",
+  "description": "O primeiro projecto usando real time.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "keywords": [
+    "real time",
+    "chat",
+    "socket.io"
+  ]
+}
