@@ -1,5 +1,7 @@
 # Real Time Communication usando socket.io <br> com Yara Polana
 
+<img src="https://github.com/yarapolana/realtimeserver/.gitimages/chatapp.png" width="500">
+
 ## Disclaimer
 
 Este projecto foi criado no workshop da Google Developer Student Clubs, é um exemplo do que pode se fazer com o socket.io, PRs are welcome.
@@ -61,3 +63,24 @@ http://localhost:3333
 ```
 
 Comece a chatar 🤩
+
+Outros exemplos com socket.io
+
+https://github.com/yarapolana/instagram-fullstack-clone
+
+---
+
+### License:
+
+This project is made available under the [MIT LICENSE](LICENSE.md).
+
+### Authors:
+
+<p>
+  <a href="https://github.com/yarapolana">
+    <img src="https://avatars0.githubusercontent.com/u/19730118?s=460&v=4" width="50" height="50">
+  </a>
+  <a href="https://dotcode.is">
+    <img src="https://avatars0.githubusercontent.com/u/72260889?s=200&v=4" width="50" height="50">
+  </a>
+</p>
