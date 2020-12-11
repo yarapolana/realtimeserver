@@ -26,14 +26,19 @@ app.get('/', (req, res) => {
   res.render('index.html');
 })
 
+let messages = []
+
 io.on('connection', (socket) => {
-  console.log('um usuário conectou-se')
+  console.log(`um usuário conectou-se com id: ${socket.id}`)
   socket.on('disconnect', () => {
     console.log('usuário desconectou-se')
   })
 
+  socket.emit('chatPassado', messages)
+
   socket.on('chatar', (msg) => {
     console.log('message: ' + msg)
+    messages.push(msg)
     io.emit('chatar', msg)
   })
 })

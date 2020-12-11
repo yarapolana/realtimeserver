@@ -25,16 +25,27 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
+      function renderMessage(message) {
+        $('#messages').append($('<li>').text(message));
+      }
+
       $(function () {
         var socket = io();
+        
+        socket.on('chatPassado', function(messages) {
+          for(message of messages) {
+            renderMessage(message);
+          }
+        });
+
         $('form').submit(function(e) {
           e.preventDefault();
           socket.emit('chatar', $('#m').val());
           $('#m').val('');
           return false;
         });
-        socket.on('chatar', function(msg) {
-          $('#messages').append($('<li>').text(msg));
+        socket.on('chatar', function(message) {
+          renderMessage(message);
         });
       });
     </script>
