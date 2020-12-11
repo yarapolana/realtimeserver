@@ -43,6 +43,8 @@ io.on('connection', (socket) => {
   })
 })
 
-server.listen(3333, () => {
-  console.log(`escutando a porta: 3333`)
+const PORT = process.env.PORT || 3333
+
+server.listen(PORT, () => {
+  console.log(`escutando a porta: ${PORT}`)
 })
