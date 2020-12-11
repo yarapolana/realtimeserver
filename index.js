@@ -1,21 +1,29 @@
 const express = require('express')
 const http = require('http')
+const path = require('path')
 const socketIo = require('socket.io')
 
 const app = express()
 const server = http.createServer(app)
 const io = socketIo(server)
 
+// use json
 app.use(express.json())
 
+// use html
+app.use(express.static(path.join(__dirname, 'public')))
+app.set('views', path.join(__dirname, 'public'))
+app.engine('html', require('ejs').renderFile)
+app.set('view engine', 'html')
+
+// define socket io global middleware
 app.use((req, res, next) => {
   req.io = io
   next()
 })
 
 app.get('/', (req, res) => {
-  // res.send('Comé mundo');
-  res.sendFile(__dirname + '/index.html');
+  res.render('index.html');
 })
 
 io.on('connection', (socket) => {
