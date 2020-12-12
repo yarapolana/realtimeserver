@@ -55,6 +55,10 @@ Inicie o servidor com
 ```
   yarn dev
 ```
+ou
+```
+  npm run dev
+```
 
 Se tudo estiver instalado correctamente, abra duas abas ou tabs no seu browser e navegue para este link, que é o seu servidor
 
