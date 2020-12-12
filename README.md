@@ -1,6 +1,6 @@
 # Real Time Communication usando socket.io <br> com Yara Polana
 
-<img src="https://github.com/yarapolana/realtimeserver/.gitimages/chatapp.png" width="500">
+<img src="https://raw.githubusercontent.com/yarapolana/realtimeserver/main/.gitimages/chatapp.png?token=AEWQ5RTHPKY4WZP7UFXXQOS73VQ6O" width="800">
 
 ## Disclaimer
 
@@ -36,7 +36,7 @@ Antes de iniciar o clone este repositorio para o seu computador com
 
 Navegue para a pasta criada e abra o projecto no seu editor de codigo
 
-<img src="https://github.com/yarapolana/realtimeserver/.gitimages/codeeditor.png" width="500">
+<img src="https://raw.githubusercontent.com/yarapolana/realtimeserver/main/.gitimages/codeeditor.png?token=AEWQ5RT3ZLKOFANFSO3RQ2K73VQ22" width="800">
 
 Logo a seguir instale as dependencias com
 
