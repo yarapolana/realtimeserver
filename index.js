@@ -23,9 +23,7 @@ app.use((req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-  // res.send('Comé mundo')
-  // res.sendFile(__dirname + '/index.html')
-  res.render('index.html')
+  res.render('index.html');
 })
 
 let messages = []
