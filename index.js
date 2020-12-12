@@ -38,10 +38,10 @@ io.on('connection', (socket) => {
 
   socket.emit('chatPassado', messages)
 
-  socket.on('chatar', (msg) => {
-    console.log('message: ' + msg)
-    messages.push(msg)
-    io.emit('chatar', msg)
+  socket.on('chatar', (message) => {
+    console.log('message: ' + message)
+    messages.push(message)
+    io.emit('chatar', message)
   })
 })
 
